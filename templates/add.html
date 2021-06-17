@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add in 
+{% endblock %}
+ 
+ {%block body%}
+    <div class="bodyclass">
+    <div class="container">
+      <div id="title" class="center">
+        <h1 id="heads" class="text-center mt-5">Book Finder</h1>
+            <div class="row">
+                <div id="input" class="input-group mx-auto col-lg-6 col-md-8 col-sm-12">
+                  <input id="search-box" type="text" class="form-control" placeholder="Search Books!...">
+                  <button id="search" class="btn btn-primary" onclick="">Search</button>
+              </div>
+            </div>
+            <div class="row" style = "height:auto;">
+              <div style="padding-left:1%;" class="list-group mx-auto col-lg-6 col-md-8 col-sm-12"id="content">
+              </div>
+            </div>
+      </div>
+      <div class="book-list" >
+        <h2 class="text-center">Search Result</h2>
+        <div id="list-output" class="">
+          <div class="row">
+            <!-- card  -->
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/static/js/index.js"></script>
+  {%endblock%}

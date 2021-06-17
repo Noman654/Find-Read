@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block head %}
+{%endblock%}
+
+{% block body %}
+<form method="POST" >
+<div id="input" class="input-group mx-auto mt-5 col-lg-4 col-md-6 col-sm-10" style="width:80%;">
+    <input id="search-box" type="text" name="search" class="form-control" placeholder="Search Stores!...">
+    <button id="search" class="btn btn-primary" onclick="">Search</button>
+</div>
+</form>
+
+{% for row in shop %}
+
+<div class="container bg-secondary mt-4">
+    <div class="card-header">
+      
+      </div>
+
+    <div class="row">
+        <div class="col col-md-6">
+            <img src={{row["image"]}} alt={{row["name"]}} class="  card-img-top" style="position:relative; height:300px;">
+        </div>
+        <div class="col-md-6 text-center">
+            <h2 class="text-light">{{row["name"]}} </h2>
+            <p class="mt-4 text-warning mb-4">asdLorem ipsum dolor sit amet consectetur adipisicing elit. Cumque minima aperiam laboriosam voluptate suscipit incidunt esse perferendis accusamus facere, unde fugit, cupiditate possimus. Facilis, sit vitae iste quod aperiam provident!</p>
+            <div class="mt-5">
+                {% set link='/shop/' + row["id"]|string %}
+            
+               <a href={{link}}>
+                     <button class="bg-info fa fa-send" style="float:left;"> visit</button>
+               </a>
+                <address class="text-info" style="float:right; ">{{row["adress"]}}</address>
+            </div>       
+        </div>
+    </div>
+    <div class="card-footer">
+      
+    </div>
+
+</div>
+          <br><br>                                        
+    {% endfor %}
+{% endblock %}
