@@ -8,7 +8,7 @@ from flask_session import Session
 import os 
 
 app = Flask(__name__)
-db = SQL("sqlite:///database.db")
+#db = SQL("sqlite:///database.db")
 
 uri = os.getenv("DATABASE_URL")
 if uri.startswith("postgres://"):
