@@ -5,10 +5,17 @@ from tempfile import mkdtemp
 from collections import defaultdict
 from functools import wraps
 from flask_session import Session
-
+import os 
 
 app = Flask(__name__)
 db = SQL("sqlite:///database.db")
+
+uri = os.getenv("DATABASE_URL")
+if uri.startswith("postgres://"):
+    uri = uri.replace("postgres://", "postgresql://")
+db = SQL(uri)
+
+pgloader --no-ssl-cert-verification database.db postgres://jepocghcdmoati:6c916f0e8e144c94fa263dea7ec515a9ada0dfa2a74c0ea56aac59e7402c2454@ec2-44-193-188-118.compute-1.amazonaws.com:5432/dcdaeicnlahl0d?sslmode=require
 
 # maake sure template are auto reload
 app.config["TEMPLATES_AUTO_RELOAD"] = True
