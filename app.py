@@ -15,7 +15,7 @@ if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://")
 db = SQL(uri)
 
-pgloader --no-ssl-cert-verification database.db uri?sslmode=require 
+#pgloader --no-ssl-cert-verification database.db uri?sslmode=require 
 #pgloader --no-ssl-cert-verification finance.db URI?sslmode=require
 
 # maake sure template are auto reload
