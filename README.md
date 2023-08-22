@@ -1,5 +1,2 @@
-in this page we solve problem to finding old books shop
-and also solving which shop has which type of books
-and where shop is located
-because of time sorting and not much data as present we have only structure how it will work
-in this we have also a buy and sell option but its update after some time
+On our website, users can locate old bookshops, identify the types of books each shop carries, and pinpoint their locations. Although we're currently in the early stages with limited data, our platform will soon feature buying and selling options
+And Also You can Read Books in form of pdf. 
